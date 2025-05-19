@@ -1,0 +1,27 @@
+{
+  "projectTitle": "House Corners Survey - May 18, 2025",
+  "droneImages": [
+    {
+      "img": "images/drone1.jpg",
+      "title": "Drone Image 1",
+      "lat": 18.5204,
+      "lon": 73.8567
+    }
+  ],
+  "panoramicImages": [
+    {
+      "img": "images/pano1.jpg",
+      "title": "Panoramic View 1",
+      "lat": 18.5205,
+      "lon": 73.8571
+    }
+  ],
+  "videos": [
+    {
+      "video": "videos/house1.mp4",
+      "title": "Corner Video 1",
+      "lat": 18.5210,
+      "lon": 73.8580
+    }
+  ]
+}

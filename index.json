@@ -1,0 +1,27 @@
+const repoBaseUrl = 'https://raw.githubusercontent.com/yourusername/yourrepo/main/data/';
+let availableDates = [];
+
+function fetchAvailableDates() {
+  fetch(repoBaseUrl + 'index.json')
+    .then(res => res.json())
+    .then(data => {
+      availableDates = data.availableDates;
+      populateDateSlider();
+      // Load the first date data by default
+      if (availableDates.length > 0) {
+        loadDateData(availableDates[0]);
+      }
+    })
+    .catch(err => console.error('Error fetching available dates:', err));
+}
+
+function populateDateSlider() {
+  const dateSlider = document.getElementById('dateSlider');
+  dateSlider.innerHTML = '';
+  availableDates.forEach(date => {
+    const btn = document.createElement('button');
+    btn.textContent = date;
+    btn.onclick = () => loadDateData(date);
+    dateSlider.appendChild(btn);
+  });
+}
